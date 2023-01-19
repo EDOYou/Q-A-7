@@ -1,0 +1,5 @@
+Let's say we define some class and working with it, whilst working I'll be using for loops (which are declared within Iterable interface). So actually we can use for loops within every class that we define.
+
+The thing is, we have to implement Iterable interface in order to use it. But in reality we don't explicitly implement it each time when we define our class.
+
+The question is, where is it implemented so I cannot see it?
