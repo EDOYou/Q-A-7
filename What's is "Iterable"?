@@ -3,3 +3,58 @@ Let's say we define some class and working with it, whilst working I'll be using
 The thing is, we have to implement Iterable interface in order to use it. But in reality we don't explicitly implement it each time when we define our class.
 
 The question is, where is it implemented so I cannot see it?
+
+
+
+
+
+import java.util.Iterator;
+
+/**
+ * This class demonstrates the usage of "for" loops implementing Iterable.
+ * */
+public class MainWithIterable implements Iterable<Integer> {
+    public static void main(String[] args) {
+
+        int[] numbers = {3, 4, 5, 6, 7, 8};
+
+        int sum = 0;
+        for (int i = 0; i < numbers.length; ++i) {
+            // Display each number in an array.
+            System.out.println("numbers[" + i + "] = " + numbers[i]);
+            sum += numbers[i];
+        }
+
+        // Displaying sum of numbers.
+        System.out.println("\nSum is: " + sum);
+    }
+
+    @Override
+    public Iterator<Integer> iterator() {
+        return null;
+    }
+}
+
+
+
+
+/**
+ * This class demonstrates that we can use "for" loops without implementing Iterable.
+ * */
+public class MainWithoutIterable {
+    public static void main(String[] args) {
+
+        int[] numbers = {3, 4, 5, 6, 7, 8};
+
+        int sum = 0;
+        for (int i = 0; i < numbers.length; ++i) {
+            // Display each number in an array.
+            System.out.println("numbers[" + i + "] = " + numbers[i]);
+            sum += numbers[i];
+        }
+
+        // Displaying sum of numbers.
+        System.out.println("\nSum is: " + sum);
+     }
+}
+
